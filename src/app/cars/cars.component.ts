@@ -34,15 +34,15 @@ export class CarsComponent {
   //   }
   // }
   // 2.8 var2
-  // onKeyUp(value) {
-  //   console.log(value);
-  //   this.inputText = value;
-  // }
-    // 2.8 var1
-  onKeyUp(event: Event) {
-    console.log(event);
-    this.inputText = (event.target as HTMLInputElement).value;
+  onKeyUp(value) {
+    console.log(value);
+    this.inputText = value;
   }
+    // 2.8 var1
+  // onKeyUp(event: Event) {
+  //   console.log(event);
+  //   this.inputText = (event.target as HTMLInputElement).value;
+  // }
         // lesson 2.6
   // constructor() {
   //   setTimeout(() => {
