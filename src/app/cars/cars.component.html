@@ -1,4 +1,18 @@
-<button [disabled]="!canAddCar" class="btn btn-primary">Add car</button>
+<!--lesson 2.7-->
+<!--<button [disabled]="!canAddCar" class="btn btn-primary">Add car</button>-->
+<button class="btn btn-primary" (click)="addCar()" >Add car</button>
+<p>{{addCarStatus}}</p>
 <hr>
 <app-car></app-car>
 <app-car></app-car>
+
+<hr>
+<!--2.8 var1-->
+<input type="text" class="form-control" (input)="onKeyUp($event)">
+<!--2.8 var2-->
+<!--<input type="text" class="form-control" #myInput (input)="onKeyUp(myInput.value)">-->
+<!--2.8 var3.1-->
+<!--<input type="text" class="form-control" (keyup)="onKeyUp($event)">-->
+<!--2.8 var3.2-->
+<!--<input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">-->
+<p>{{ inputText }}</p>
