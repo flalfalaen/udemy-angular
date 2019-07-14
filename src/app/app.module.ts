@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 // my created custom components
 import { MyComponent } from './my/my.component';
 import { MyOwnComponent } from './myOwn/myOwn.component';
+import { My2Component } from './my2/my2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponent,
-    MyOwnComponent
+    MyOwnComponent,
+    My2Component
   ],
   imports: [
     BrowserModule
