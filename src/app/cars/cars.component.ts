@@ -22,17 +22,17 @@ export class CarsComponent {
   }
 
   // 2.8 var3.2
-  // onKeyUp(event) {
-  //   console.log(event);
-  //   this.inputText = event.target.value;
-  // }
-  // 2.8 var3.1
   onKeyUp(event) {
     console.log(event);
-    if (event.code === 'Enter') {
-      this.inputText = event.target.value;
-    }
+    this.inputText = event.target.value;
   }
+  // 2.8 var3.1
+  // onKeyUp(event) {
+  //   console.log(event);
+  //   if (event.code === 'Enter') {
+  //     this.inputText = event.target.value;
+  //   }
+  // }
   // 2.8 var2
   // onKeyUp(value) {
   //   console.log(value);
