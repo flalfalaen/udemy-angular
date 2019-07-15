@@ -15,4 +15,6 @@
 <!--<input type="text" class="form-control" (keyup)="onKeyUp($event)">-->
 <!--2.8 var3.2-->
 <input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
+<!--2.9 2wayBinding -->
+<input type="text" class="form-control" [(ngModel)]="inputText" >
 <p>{{ inputText }}</p>

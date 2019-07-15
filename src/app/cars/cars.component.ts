@@ -12,7 +12,7 @@ export class CarsComponent {
   // canAddCar = false; //lesson 2.6
 
   addCarStatus = '';
-  inputText = '';
+  inputText = 'please enter your text here';
   constructor() {
 
   }
