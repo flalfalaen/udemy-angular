@@ -11,21 +11,25 @@ export class CarsComponent {
 
   // canAddCar = false; //lesson 2.6
 
-  addCarStatus = '';
-  inputText = 'please enter your text here';
+  addCarStatus = false;
+
   constructor() {
 
   }
 
   addCar() {
-    this.addCarStatus = 'Car added';
+    // this.addCarStatus = 'Car added';
+    this.addCarStatus = true;
   }
 
+  // 2.7 - 2.9
+  // inputText = 'please enter your text here';
+
   // 2.8 var3.2
-  onKeyUp(event) {
-    console.log(event);
-    this.inputText = event.target.value;
-  }
+  // onKeyUp(event) {
+  //   console.log(event);
+  //   this.inputText = event.target.value;
+  // }
   // 2.8 var3.1
   // onKeyUp(event) {
   //   console.log(event);
