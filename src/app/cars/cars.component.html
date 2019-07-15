@@ -1,20 +1,18 @@
 <!--lesson 2.7-->
 <!--<button [disabled]="!canAddCar" class="btn btn-primary">Add car</button>-->
+<input type="text" class="form-control" [(ngModel)]="carName" >
 <button class="btn btn-primary" (click)="addCar()" >Add car</button>
-<p *ngIf="addCarStatus">Car added</p>
-<p *ngIf="!addCarStatus">Car doesn't added</p>
+<!--2.10 var1-->
+<!--<p *ngIf="addCarStatus">Car added</p>-->
+<!--<p *ngIf="!addCarStatus">Car doesn't added</p>-->
+<!--2.10 var2-->
+<p *ngIf="addCarStatus; else statusAddedTrue">Car added</p>
+<ng-template #statusAddedTrue>
+  <p>Car doesn't added</p>
+</ng-template>
 <hr>
 <app-car></app-car>
 <app-car></app-car>
-
-
-
-
-
-
-
-
-
 
 
 

@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class CarsComponent {
 
   // canAddCar = false; //lesson 2.6
-
+  carName = '';
   addCarStatus = false;
 
   constructor() {
