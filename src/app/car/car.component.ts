@@ -15,12 +15,14 @@ import { Component, Input } from '@angular/core';
   // `]
 })
 export class CarComponent  {
-  @Input() carDataCarComponent: { name: string, year: number };
+  @Input('carDataCarComponent') carsData: { name: string, year: number };
   // carName = 'Ford';
   // carYear = '2017';
   //
   // getName() {
   //   return this.carName;
   // }
+
+  private carDataCarComponent = false; // example
 }
 
