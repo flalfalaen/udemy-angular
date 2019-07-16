@@ -1,6 +1,6 @@
 <!--lesson 2.7-->
 <!--<button [disabled]="!canAddCar" class="btn btn-primary">Add car</button>-->
-<input type="text" class="form-control" [(ngModel)]="carName" >
+<input type="text" class="form-control" [(ngModel)]="carNameInput" >
 <button class="btn btn-primary" (click)="addCar()" >Add car</button>
 <!--2.10 var1-->
 <!--<p *ngIf="addCarStatus">Car added</p>-->
@@ -11,8 +11,13 @@
   <p>Car doesn't added</p>
 </ng-template>
 <hr>
-<app-car></app-car>
-<app-car></app-car>
+<!--2.11-->
+<app-car *ngFor="let carName of carsArray;"></app-car>
+<ul>
+  <li *ngFor="let object of objectsArray1; let objectsIndex = index">
+    <p>{{objectsIndex + 1}} - {{ object.name }} and it has ID: {{object.id}}</p>
+  </li>
+</ul>
 
 
 

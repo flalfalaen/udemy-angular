@@ -10,8 +10,13 @@ import { Component } from '@angular/core';
 export class CarsComponent {
 
   // canAddCar = false; //lesson 2.6
-  carName = '';
   addCarStatus = false;
+
+  carNameInput = '';
+  // carYear = '';
+  carsArray = ['Ford', 'Pontiac', 'Dodge', 'Chevrolet'];
+  carsYears = ['1980', '1970', '1990', '2000'];
+  objectsArray1 = [ {id: 42, name: 'simpleName1'}, {id: 48, name: 'simpleName2'}, {id: 47, name: 'simpleName3'} ];
 
   constructor() {
 
