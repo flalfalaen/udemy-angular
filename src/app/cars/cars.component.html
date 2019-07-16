@@ -1,57 +1,17 @@
-<!--lesson 2.7-->
-<!--<button [disabled]="!canAddCar" class="btn btn-primary">Add car</button>-->
-<input type="text" class="form-control" [(ngModel)]="carNameInput" >
-<button class="btn btn-primary" (click)="addCar()" >Add car</button>
-<!--2.10 var1-->
-<!--<p *ngIf="addCarStatus">Car added</p>-->
-<!--<p *ngIf="!addCarStatus">Car doesn't added</p>-->
-<!--2.10 var2-->
+<input type="text" class="form-control" [(ngModel)]="inputCarName" >
+<hr>
+<input type="text" class="form-control" [(ngModel)]="inputCarYear" >
+<hr>
+<button class="btn btn-primary" (click)="addCar()">ADD CAR</button>
 <p *ngIf="addCarStatus; else statusAddedTrue">Car added</p>
 <ng-template #statusAddedTrue>
   <p>Car doesn't added</p>
 </ng-template>
-<hr>
+<br>
+<app-car *ngFor="let carData of carsDataArray" [carDataCarComponent]="carData"></app-car>
 
-<!--2.13-->
-<ul>
-  <li *ngFor="let date of dateArray; let dateIndex = index">
-    <p>{{dateIndex + 1}} - {{ date | date }}</p>
-  </li>
-</ul>
-
-<!--2.11-->
-<!--<app-car *ngFor="let carName of carsArray;"></app-car>-->
 <!--<ul>-->
-<!--  <li *ngFor="let object of objectsArray1; let objectsIndex = index">-->
-<!--    <p>{{objectsIndex + 1}} - {{ object.name }} and it has ID: {{object.id}}</p>-->
+<!--  <li *ngFor="let carData of carsDataArray">-->
+<!--    <p>{{ carData.name }} - {{ carData.year }}</p>-->
 <!--  </li>-->
 <!--</ul>-->
-
-<!--2.12-->
-<!--<p>{{'existing cars in array'}}</p>-->
-<!--<ol>-->
-<!--  <li *ngFor="let carName of carsArray; let carIndex = index">-->
-<!--    <div-->
-<!--      [ngStyle]="{backgroundColor: (carIndex + 1) % 2 === 0 ? 'red' : 'green', 'color': 'white'}"-->
-<!--      [ngClass]="{'text-decoration-big': carBigNameFiltering(carName), 'text-decoration-small': carSmallNameFiltering(carName)}"-->
-<!--    >-->
-<!--      <div>-->
-<!--        <b>{{ carName }}</b>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </li>-->
-<!--</ol>-->
-
-
-<!--<hr>-->
-<!--2.8 var1-->
-<!--<input type="text" class="form-control" (input)="onKeyUp($event)">-->
-<!--2.8 var2-->
-<!--<input type="text" class="form-control" #myInput (input)="onKeyUp(myInput.value)">-->
-<!--2.8 var3.1-->
-<!--<input type="text" class="form-control" (keyup)="onKeyUp($event)">-->
-<!--2.8 var3.2-->
-<!--<input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">-->
-<!--2.9 2wayBinding -->
-<!--<input type="text" class="form-control" [(ngModel)]="inputText" >-->
-<!--<p>{{ inputText }}</p>-->
