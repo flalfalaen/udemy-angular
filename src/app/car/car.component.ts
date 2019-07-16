@@ -23,6 +23,6 @@ export class CarComponent  {
   //   return this.carName;
   // }
 
-  private carDataCarComponent = false; // example
+  // private carDataCarComponent = false; // example
 }
 

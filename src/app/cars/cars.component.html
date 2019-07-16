@@ -1,12 +1,14 @@
-<input type="text" class="form-control" [(ngModel)]="inputCarName" >
-<hr>
-<input type="text" class="form-control" [(ngModel)]="inputCarYear" >
-<hr>
-<button class="btn btn-primary" (click)="addCar()">ADD CAR</button>
-<p *ngIf="addCarStatus; else statusAddedTrue">Car added</p>
-<ng-template #statusAddedTrue>
-  <p>Car doesn't added</p>
-</ng-template>
+<!--3.14-->
+<!--<input type="text" class="form-control" [(ngModel)]="inputCarName" >-->
+<!--<hr>-->
+<!--<input type="text" class="form-control" [(ngModel)]="inputCarYear" >-->
+<!--<hr>-->
+<!--<button class="btn btn-primary" (click)="addCar()">ADD CAR</button>-->
+<!--<p *ngIf="addCarStatus; else statusAddedTrue">Car added</p>-->
+<!--<ng-template #statusAddedTrue>-->
+<!--  <p>Car doesn't added</p>-->
+<!--</ng-template>-->
+<app-add-car (addCarDataToArray)="updateCarDataArray($event)"></app-add-car>
 <br>
 <app-car *ngFor="let carData of carsDataArray" [carDataCarComponent]="carData"></app-car>
 

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 // my created custom components
 import { CarsComponent } from './cars/cars.component';
 import { CarComponent } from './car/car.component';
+import { AddCarComponent } from './add-car/add-car.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CarsComponent,
-    CarComponent
+    CarComponent,
+    AddCarComponent
   ],
   imports: [
     BrowserModule,

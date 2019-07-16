@@ -10,9 +10,10 @@ export class CarsComponent {
   constructor() {
 
   }
-  addCarStatus = false;
-  inputCarName = null;
-  inputCarYear = null;
+  // 3.14
+  // addCarStatus = false;
+  // inputCarName = null;
+  // inputCarYear = null;
 
   carsDataArray = [
     { name: 'Ford', year: 1980 },
@@ -21,14 +22,18 @@ export class CarsComponent {
     { name: 'Chevrolet', year: 2000 }
   ];
 
-  addCar() {
-    this.addCarStatus = true;
-    this.carsDataArray.push({
-      name: this.inputCarName,
-      year: this.inputCarYear
-    });
-    this.inputCarName = null;
-    this.inputCarYear = null;
+  updateCarDataArray(carsData: { name: string, year: number}) {
+    this.carsDataArray.push(carsData);
   }
+  // 3.14
+  // addCar() {
+  //   this.addCarStatus = true;
+  //   this.carsDataArray.push({
+  //     name: this.inputCarName,
+  //     year: this.inputCarYear
+  //   });
+  //   this.inputCarName = null;
+  //   this.inputCarYear = null;
+  // }
 
 }
