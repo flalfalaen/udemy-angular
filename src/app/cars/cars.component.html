@@ -12,15 +12,19 @@
 </ng-template>
 <hr>
 <!--2.11-->
-<app-car *ngFor="let carName of carsArray;"></app-car>
-<ul>
-  <li *ngFor="let object of objectsArray1; let objectsIndex = index">
-    <p>{{objectsIndex + 1}} - {{ object.name }} and it has ID: {{object.id}}</p>
-  </li>
-</ul>
+<!--<app-car *ngFor="let carName of carsArray;"></app-car>-->
+<!--<ul>-->
+<!--  <li *ngFor="let object of objectsArray1; let objectsIndex = index">-->
+<!--    <p>{{objectsIndex + 1}} - {{ object.name }} and it has ID: {{object.id}}</p>-->
+<!--  </li>-->
+<!--</ul>-->
 <p>{{'existing cars in array'}}</p>
 <ol>
-  <li *ngFor="let carName of carsArray"> <b>{{ carName }}</b> </li>
+  <li *ngFor="let carName of carsArray; let carIndex = index">
+    <div [ngStyle]="{backgroundColor: (carIndex + 1) % 2 === 0 ? 'red' : 'green', 'color': 'white'}"  >
+      <b>{{ carName }}</b>
+    </div>
+  </li>
 </ol>
 
 

@@ -14,9 +14,10 @@ export class CarsComponent {
 
   carNameInput = null;
   // carYear = '';
-  carsArray = ['Ford', 'Pontiac', 'Dodge', 'Chevrolet'];
+  carsArray = ['Ford', 'Pontiac', 'Dodge', 'Chevrolet', 'Mazda', 'KIA'];
   carsYears = ['1980', '1970', '1990', '2000'];
-  objectsArray1 = [ {id: 42, name: 'simpleName1'}, {id: 48, name: 'simpleName2'}, {id: 47, name: 'simpleName3'} ];
+  // 2.11 lesson
+  // objectsArray1 = [ {id: 42, name: 'simpleName1'}, {id: 48, name: 'simpleName2'}, {id: 47, name: 'simpleName3'} ];
 
   constructor() {
 
