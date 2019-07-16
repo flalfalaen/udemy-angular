@@ -21,7 +21,10 @@
 <p>{{'existing cars in array'}}</p>
 <ol>
   <li *ngFor="let carName of carsArray; let carIndex = index">
-    <div [ngStyle]="{backgroundColor: (carIndex + 1) % 2 === 0 ? 'red' : 'green', 'color': 'white'}"  >
+    <div
+      [ngStyle]="{backgroundColor: (carIndex + 1) % 2 === 0 ? 'red' : 'green', 'color': 'white'}"
+      [ngClass]="{'text-decoration-big': carBigNameFiltering(carName), 'text-decoration-small': carSmallNameFiltering(carName)}"
+    >
       <b>{{ carName }}</b>
     </div>
   </li>

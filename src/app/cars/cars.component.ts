@@ -30,6 +30,12 @@ export class CarsComponent {
     this.carNameInput = null;
   }
 
+  carBigNameFiltering(carName: string) {
+    return carName.length > 5;
+  }
+  carSmallNameFiltering(carName: string) {
+    return carName.length < 4;
+  }
   // 2.7 - 2.9
   // inputText = 'please enter your text here';
 
