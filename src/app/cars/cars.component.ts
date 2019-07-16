@@ -12,7 +12,7 @@ export class CarsComponent {
   // canAddCar = false; //lesson 2.6
   addCarStatus = false;
 
-  carNameInput = '';
+  carNameInput = null;
   // carYear = '';
   carsArray = ['Ford', 'Pontiac', 'Dodge', 'Chevrolet'];
   carsYears = ['1980', '1970', '1990', '2000'];
@@ -25,6 +25,8 @@ export class CarsComponent {
   addCar() {
     // this.addCarStatus = 'Car added';
     this.addCarStatus = true;
+    this.carsArray.push(this.carNameInput);
+    this.carNameInput = null;
   }
 
   // 2.7 - 2.9
