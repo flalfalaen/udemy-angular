@@ -11,6 +11,14 @@
   <p>Car doesn't added</p>
 </ng-template>
 <hr>
+
+<!--2.13-->
+<ul>
+  <li *ngFor="let date of dateArray; let dateIndex = index">
+    <p>{{dateIndex + 1}} - {{ date | date }}</p>
+  </li>
+</ul>
+
 <!--2.11-->
 <!--<app-car *ngFor="let carName of carsArray;"></app-car>-->
 <!--<ul>-->
@@ -18,17 +26,21 @@
 <!--    <p>{{objectsIndex + 1}} - {{ object.name }} and it has ID: {{object.id}}</p>-->
 <!--  </li>-->
 <!--</ul>-->
-<p>{{'existing cars in array'}}</p>
-<ol>
-  <li *ngFor="let carName of carsArray; let carIndex = index">
-    <div
-      [ngStyle]="{backgroundColor: (carIndex + 1) % 2 === 0 ? 'red' : 'green', 'color': 'white'}"
-      [ngClass]="{'text-decoration-big': carBigNameFiltering(carName), 'text-decoration-small': carSmallNameFiltering(carName)}"
-    >
-      <b>{{ carName }}</b>
-    </div>
-  </li>
-</ol>
+
+<!--2.12-->
+<!--<p>{{'existing cars in array'}}</p>-->
+<!--<ol>-->
+<!--  <li *ngFor="let carName of carsArray; let carIndex = index">-->
+<!--    <div-->
+<!--      [ngStyle]="{backgroundColor: (carIndex + 1) % 2 === 0 ? 'red' : 'green', 'color': 'white'}"-->
+<!--      [ngClass]="{'text-decoration-big': carBigNameFiltering(carName), 'text-decoration-small': carSmallNameFiltering(carName)}"-->
+<!--    >-->
+<!--      <div>-->
+<!--        <b>{{ carName }}</b>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </li>-->
+<!--</ol>-->
 
 
 <!--<hr>-->

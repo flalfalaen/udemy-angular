@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent {
+  // 2.11 lesson
+  // objectsArray1 = [ {id: 42, name: 'simpleName1'}, {id: 48, name: 'simpleName2'}, {id: 47, name: 'simpleName3'} ];
+
+  constructor() {
+
+  }
 
   // canAddCar = false; //lesson 2.6
   addCarStatus = false;
@@ -16,12 +22,13 @@ export class CarsComponent {
   // carYear = '';
   carsArray = ['Ford', 'Pontiac', 'Dodge', 'Chevrolet', 'Mazda', 'KIA'];
   carsYears = ['1980', '1970', '1990', '2000'];
-  // 2.11 lesson
-  // objectsArray1 = [ {id: 42, name: 'simpleName1'}, {id: 48, name: 'simpleName2'}, {id: 47, name: 'simpleName3'} ];
-
-  constructor() {
-
-  }
+  // 2.13 lesson
+  dateArray = [
+    new Date(2012, 1, 1),
+    new Date(2015, 2, 2),
+    new Date(2017, 7, 5),
+    new Date(2019, 7, 1)
+  ];
 
   addCar() {
     // this.addCarStatus = 'Car added';
@@ -29,13 +36,13 @@ export class CarsComponent {
     this.carsArray.push(this.carNameInput);
     this.carNameInput = null;
   }
-
-  carBigNameFiltering(carName: string) {
-    return carName.length > 5;
-  }
-  carSmallNameFiltering(carName: string) {
-    return carName.length < 4;
-  }
+  // 2.12 lesson
+  // carBigNameFiltering(carName: string) {
+  //   return carName.length > 5;
+  // }
+  // carSmallNameFiltering(carName: string) {
+  //   return carName.length < 4;
+  // }
   // 2.7 - 2.9
   // inputText = 'please enter your text here';
 
