@@ -11,10 +11,10 @@ export class AddCarComponent {
   inputCarYear = null;
   @Output('addCarDataToArray') carsData = new EventEmitter<{name: string, year: number}>();
 
-  addCar() {
+  addCar(carNameElement) {
     this.addCarStatus = true;
     this.carsData.emit({
-      name: this.inputCarName,
+      name: carNameElement.value,
       year: this.inputCarYear
     });
     this.inputCarName = null;

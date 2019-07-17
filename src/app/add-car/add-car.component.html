@@ -1,8 +1,11 @@
-<input type="text" class="form-control" [(ngModel)]="inputCarName" >
+<!-- 3.16 -->
+<!--<input type="text" class="form-control" [(ngModel)]="inputCarName" >-->
+
+<input type="text" class="form-control" #carNameInput >
 <hr>
 <input type="text" class="form-control" [(ngModel)]="inputCarYear" >
 <hr>
-<button class="btn btn-primary" (click)="addCar()">ADD CAR</button>
+<button class="btn btn-primary" (click)="addCar(carNameInput)">ADD CAR</button>
 <p *ngIf="addCarStatus; else statusAddedTrue">Car added</p>
 <ng-template #statusAddedTrue>
   <p>Car doesn't added</p>
