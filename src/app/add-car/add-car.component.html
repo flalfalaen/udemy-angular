@@ -1,9 +1,9 @@
 <!-- 3.16 -->
 <!--<input type="text" class="form-control" [(ngModel)]="inputCarName" >-->
-
+<!--<input type="text" class="form-control" [(ngModel)]="inputCarYear" >-->
 <input type="text" class="form-control" #carNameInput >
 <hr>
-<input type="text" class="form-control" [(ngModel)]="inputCarYear" >
+<input type="text" class="form-control" #carYearInput >
 <hr>
 <button class="btn btn-primary" (click)="addCar(carNameInput)">ADD CAR</button>
 <p *ngIf="addCarStatus; else statusAddedTrue">Car added</p>
