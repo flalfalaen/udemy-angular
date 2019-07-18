@@ -12,7 +12,12 @@
 <hr>
 <app-add-car (addCarDataToArray)="updateCarDataArray($event)"></app-add-car>
 <br>
-<app-car *ngFor="let carData of carsDataArray" [carDataCarComponent]="carData"></app-car>
+<div class="list-group">
+  <app-car class="list-group-item" *ngFor="let carData of carsDataArray" [carDataCarComponent]="carData">
+    <h4 class="list-group-item-heading">Name: {{ carData.name }}</h4>
+    <p class="list-group-item-text">Year: {{ carData.year }}</p>
+  </app-car>
+</div>
 
 <!--<ul>-->
 <!--  <li *ngFor="let carData of carsDataArray">-->
