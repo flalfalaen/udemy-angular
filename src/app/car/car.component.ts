@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, ElementRef, ContentChild} from '@angular/core';
 
 @Component({
   selector: 'app-car',
@@ -16,6 +16,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CarComponent  {
   @Input('carDataCarComponent') carsData: { name: string, year: number };
+  @ContentChild('carHeading', {static: true}) carHeading: ElementRef;
+
+
   // carName = 'Ford';
   // carYear = '2017';
   //

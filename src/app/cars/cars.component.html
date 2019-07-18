@@ -14,7 +14,7 @@
 <br>
 <div class="list-group">
   <app-car class="list-group-item" *ngFor="let carData of carsDataArray" [carDataCarComponent]="carData">
-    <h4 class="list-group-item-heading">Name: {{ carData.name }}</h4>
+    <h4 #carHeading class="list-group-item-heading">Name: {{ carData.name }}</h4>
     <p class="list-group-item-text">Year: {{ carData.year }}</p>
   </app-car>
 </div>
