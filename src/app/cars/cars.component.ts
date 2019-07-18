@@ -18,13 +18,21 @@ export class CarsComponent {
 
   carsDataArray = [
     { name: 'Ford', year: 1980 },
-    { name: 'Pontiac', year: 1970 },
-    { name: 'Dodge', year: 1990 },
-    { name: 'Chevrolet', year: 2000 }
+    // { name: 'Pontiac', year: 1970 },
+    // { name: 'Dodge', year: 1990 },
+    // { name: 'Chevrolet', year: 2000 }
   ];
 
   updateCarDataArray(carsData: { name: string, year: number}) {
     this.carsDataArray.push(carsData);
+  }
+
+  changeCarsName() {
+    this.carsDataArray[0].name = 'New car name';
+  }
+
+  deleteCar() {
+    this.carsDataArray.splice(0, 1);
   }
   // 3.14
   // addCar() {
